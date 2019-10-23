@@ -1,0 +1,87 @@
+"this file is added by kzhang
+
+"delete some plugins enabled by spf13
+
+    " General {
+        "if count(g:spf13_bundle_groups, 'general')
+            "Bundle 'scrooloose/nerdtree'
+            "Bundle 'altercation/vim-colors-solarized'
+            "Bundle 'spf13/vim-colors'
+            UnBundle 'tpope/vim-surround'
+            "Bundle 'tpope/vim-repeat'
+			UnBundle 'rhysd/conflict-marker.vim'
+            "Bundle 'jiangmiao/auto-pairs'
+            "Bundle 'ctrlpvim/ctrlp.vim'
+            "Bundle 'tacahiroy/ctrlp-funky'
+            UnBundle 'terryma/vim-multiple-cursors'
+            "Bundle 'vim-scripts/sessionman.vim'
+            "Bundle 'matchit.zip'
+            "if (has("python") || has("python3")) && exists('g:spf13_use_powerline') && !exists('g:spf13_use_old_powerline')
+                "Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
+            "elseif exists('g:spf13_use_powerline') && exists('g:spf13_use_old_powerline')
+                "Bundle 'Lokaltog/vim-powerline'
+            "else
+                "Bundle 'vim-airline/vim-airline'
+                "Bundle 'vim-airline/vim-airline-themes'
+            "endif
+            "Bundle 'powerline/fonts'
+			UnBundle 'bling/vim-bufferline'
+            "Bundle 'easymotion/vim-easymotion'
+				"快速跳转
+				"<leader><leader>w  <leader><leader>b  <leader><leader>j
+            "Bundle 'jistr/vim-nerdtree-tabs'
+            "Bundle 'flazz/vim-colorschemes'
+				"修改配色, 比如   :Colorscheme solarized  (用tab可以自动补全)
+            "Bundle 'mbbill/undotree'
+            UnBundle 'nathanaelkane/vim-indent-guides'
+            "if !exists('g:spf13_no_views')
+                "Bundle 'vim-scripts/restore_view.vim'
+            "endif
+            "Bundle 'mhinz/vim-signify'
+            UnBundle 'tpope/vim-abolish.git'
+            "Bundle 'osyo-manga/vim-over'
+            UnBundle 'kana/vim-textobj-user'
+            UnBundle 'kana/vim-textobj-indent'
+            UnBundle 'gcmt/wildfire.vim'
+        "endif
+    " }
+
+" General Programming {
+		" Pick one of the checksyntax, jslint, or syntastic
+		UnBundle 'scrooloose/syntastic'
+		UnBundle 'tpope/vim-fugitive'
+		UnBundle 'mattn/webapi-vim'
+		UnBundle 'mattn/gist-vim'
+		"Bundle 'scrooloose/nerdcommenter'
+		UnBundle 'tpope/vim-commentary'
+		"Bundle 'godlygeek/tabular'
+		"Bundle 'luochen1990/rainbow'
+		"Bundle 'majutsushi/tagbar'
+" }
+
+" Writing {
+	"if count(g:spf13_bundle_groups, 'writing')
+		"Bundle 'reedes/vim-litecorrect'
+		"Bundle 'reedes/vim-textobj-sentence'
+		"Bundle 'reedes/vim-textobj-quote'
+		"Bundle 'reedes/vim-wordy'
+	"endif
+" }
+
+    " Misc {
+        "if count(g:spf13_bundle_groups, 'misc')
+            UnBundle 'rust-lang/rust.vim'
+            "Bundle 'tpope/vim-markdown'
+            "Bundle 'spf13/vim-preview'
+            UnBundle 'tpope/vim-cucumber'
+            UnBundle 'cespare/vim-toml'
+            UnBundle 'quentindecock/vim-cucumber-align-pipes'
+            UnBundle 'saltstack/salt-vim'
+        "endif
+    " }
+
+
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'Yggdroot/indentLine'
+Bundle 'zkzzkk/autoload_cscope.vim'
+

@@ -1,0 +1,84 @@
+"this file is added by kzhang
+" Plugins {
+    "  {
+        "if isdirectory(expand("~/.vim/bundle/vim-bufferline/"))
+			"let g:bufferline_active_buffer_left = '['
+			"let g:bufferline_active_buffer_right = ']'
+        "endif
+    " }
+
+	let g:miniBufExplBRSplit = 1
+
+" }
+
+map <F4> "+gP
+map <F3> "+y
+
+unmap <C-e>
+"unmap <C-y>
+map <C-up> <C-y>
+map <C-down> <C-e>
+map <up> <C-y>
+map <down> <C-e>
+map <C-j> <C-e>
+map <C-k> <C-y>
+map <A-j> <C-e>
+map <A-k> <C-y>
+"map <C-left> :bp<CR>
+"map <C-right> :bn<CR>
+nnoremap <left> :bp<CR>
+nnoremap <right> :bn<CR>
+nnoremap <A-left> :MBEbb<CR>
+nnoremap <A-right> :MBEbf<CR>
+
+noremap <C-tab> :MBEbb<CR>
+map <leader>b :MBEFocus<CR>
+
+set expandtab
+
+let g:airline_detect_spell=0
+let g:airline_detect_spelllang=0
+let g:airline_section_y=0
+"let g:airline_theme="bubblegum"
+let g:airline_mode_map = {
+  \ '__' : '-',
+  \ 'n'  : 'N',
+  \ 'i'  : 'I',
+  \ 'R'  : 'R',
+  \ 'c'  : 'C',
+  \ 'v'  : 'V',
+  \ 'V'  : 'V',
+  \ '' : 'V',
+  \ 's'  : 'S',
+  \ 'S'  : 'S',
+  \ '' : 'S',
+  \ }
+
+"set tags=./tags,../tags,../../tags,../../../tags
+map <F5> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+
+"paste text to command line (in command line mode)
+"<C-r>"
+"paste word under current cursor to command line (in command line mode)
+map <F9> <C-r><C-w>
+
+"quick fix short cut
+map <leader>qf :vert copen<CR><C-w>=
+"map <F8> :vimgrep /<C-r><C-w>/gj % <CR>:vert copen<CR><C-w>=
+"map <F8> :vimgrep /<C-r>"/gj % <CR>:vert copen<CR><C-w>=
+map <F6> :vimgrep /<C-r><C-W>/g *
+
+map <F10> :NERDTreeTabsToggle<CR>
+nmap <F8> :TagbarToggle<CR>
+let g:tagbar_autoclose = 1
+
+nmap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>ft :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>fe :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>ff :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <leader>fi :cs find i <C-R>=expand("<cfile>")<CR><CR>
+nmap <leader>fd :cs find d <C-R>=expand("<cword>")<CR><CR>
+
