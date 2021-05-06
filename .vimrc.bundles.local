@@ -31,7 +31,7 @@
 				"<leader><leader>w  <leader><leader>b  <leader><leader>j
             "Bundle 'jistr/vim-nerdtree-tabs'
             "Bundle 'flazz/vim-colorschemes'
-				"修改配色, 比如   :Colorscheme solarized  (用tab可以自动补全)
+				"修改配色, 比如   :colorscheme solarized  (用tab可以自动补全)
             "Bundle 'mbbill/undotree'
             UnBundle 'nathanaelkane/vim-indent-guides'
             "if !exists('g:spf13_no_views')

@@ -1,3 +1,4 @@
 "this file is added by kzhang
 
 let g:spf13_bundle_groups=['general', 'writing', 'neocomplete', 'programming', 'python', 'misc',]
+"let g:spf13_bundle_groups=['general', 'writing', 'programming', 'python', 'misc',]

@@ -54,7 +54,7 @@ let g:airline_mode_map = {
   \ '' : 'S',
   \ }
 
-"set tags=./tags,../tags,../../tags,../../../tags
+set tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags,../../../../../../tags,../../../../../../../tags
 map <F5> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 
@@ -81,4 +81,11 @@ nmap <leader>fe :cs find e <C-R>=expand("<cword>")<CR><CR>
 nmap <leader>ff :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <leader>fi :cs find i <C-R>=expand("<cfile>")<CR><CR>
 nmap <leader>fd :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+nmap <leader>fs :set cscopequickfix=s-<CR>:cs find s <C-R>=expand("<cword>")<CR><CR>:set cscopequickfix=<CR>:copen<CR>
+
+nmap <leader>h <C-W>h
+nmap <leader>l <C-W>l
+nmap <leader>j <C-W>j
+nmap <leader>k <C-W>k
 
